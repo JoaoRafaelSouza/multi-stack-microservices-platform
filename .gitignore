@@ -1,0 +1,69 @@
+# ========================
+# ENV (SENHAS / CONFIG)
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# DOCKER
+# ========================
+docker-data/
+*.log
+
+# ========================
+# PHP / LARAVEL
+# ========================
+vendor/
+node_modules/
+public/storage
+storage/*.key
+
+# ========================
+# NODE / REACT / VUE
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# ========================
+# PYTHON
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# ========================
+# .NET / C#
+# ========================
+bin/
+obj/
+*.user
+*.suo
+
+# ========================
+# JAVA
+# ========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# ========================
+# DATABASE FILES (se houver locais)
+# ========================
+*.sql
+*.dump
+
+# ========================
+# SISTEMA OPERACIONAL
+# ========================
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+name: Multi Stack CI/CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build
+        run: docker-compose build
+
+      - name: Up
+        run: docker-compose up -d
+
+      - name: Check
+        run: docker ps

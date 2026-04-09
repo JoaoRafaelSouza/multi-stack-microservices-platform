@@ -1,0 +1,41 @@
+multi-stack-enterprise/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── gateway/
+├── auth-service/
+│
+├── services/
+│   ├── codeignite/
+│   ├── dotnet-csharp/
+│   ├── dotnet-vb/
+│   ├── java/
+│   ├── laravel/
+│   ├── node/
+│   ├── python/
+│   └── wordpress/
+│
+├── databases/
+│   ├── mongo/
+│   ├── mysql/
+│   ├── oracle/
+│   ├── postgres/
+│   ├── sqlserver-csharp/
+│   └── sqlserver-vb/
+│
+├── rabbitmq/
+├── prometheus/
+├── grafana/
+│
+├── nginx/
+│   └── nginx.conf
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+│
+└── README.md
