@@ -32,6 +32,11 @@ services:
       - mysql
     networks:
       - microservices
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   mysql:
     image: mysql:8
@@ -85,6 +90,8 @@ services:
       - mongo
     networks:
       - microservices
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
 
   mongo:
     image: mongo
@@ -104,6 +111,8 @@ services:
       - postgres
     networks:
       - microservices
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
 
   postgres:
     image: postgres

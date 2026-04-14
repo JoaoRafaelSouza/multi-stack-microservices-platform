@@ -4,18 +4,7 @@ multi-stack-enterprise/
 │   └── workflows/
 │       └── ci.yml
 │
-├── gateway/
 ├── auth-service/
-│
-├── services/
-│   ├── codeignite/
-│   ├── dotnet-csharp/
-│   ├── dotnet-vb/
-│   ├── java/
-│   ├── laravel/
-│   ├── node/
-│   ├── python/
-│   └── wordpress/
 │
 ├── databases/
 │   ├── mongo/
@@ -25,17 +14,40 @@ multi-stack-enterprise/
 │   ├── sqlserver-csharp/
 │   └── sqlserver-vb/
 │
-├── rabbitmq/
-├── prometheus/
+├── Docs/
+│   ├── deploy.md
+│   └── endpoints.md
+│
+├── gateway/
 ├── grafana/
 │
 ├── nginx/
 │   └── nginx.conf
+│
+├── prometheus/
+├── rabbitmq/
+│
+├── services/
+│   ├── codeignite/
+│       └── Dockerfile
+│   ├── dotnet-csharp/
+│       └── Dockerfile
+│   ├── dotnet-vb/
+│       └── Dockerfile
+│   ├── java/
+│       └── Dockerfile
+│   ├── laravel/
+│       └── Dockerfile
+│   ├── node/
+│       └── Dockerfile
+│   ├── python/
+│       └── Dockerfile
+│   └── wordpress/
+│       └── Dockerfile
 │
 ├── .env
 ├── .env.example
 ├── .gitignore
 ├── docker-compose.yml
 ├── Dockerfile
-│
 └── README.md

@@ -9,13 +9,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Build
+      - name: Build containers
         run: docker-compose build
 
-      - name: Up
+      - name: Start containers
         run: docker-compose up -d
 
-      - name: Check
+      - name: Wait services
+        run: sleep 30
+
+      - name: Check running containers
         run: docker ps
+
+      - name: Test Laravel
+        run: curl -f http://localhost:9001 || exit 1
+
+      - name: Test Node
+        run: curl -f http://localhost:9002 || exit 1
+
+      - name: Test Python
+        run: curl -f http://localhost:9003 || exit 1
+
+      - name: Deploy to EC2
+        run: |
+          ssh ec2-user@IP "cd projeto && docker-compose pull && docker-compose up -d"
