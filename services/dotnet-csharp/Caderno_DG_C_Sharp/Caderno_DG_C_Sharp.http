@@ -1,0 +1,6 @@
+@Caderno_DG_C_Sharp_HostAddress = http://localhost:5223
+
+GET {{Caderno_DG_C_Sharp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

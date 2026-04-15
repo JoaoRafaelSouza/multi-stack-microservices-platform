@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd
 
-# Copiar plugins (opcional)
+# Copiar plugins
 # COPY ./plugins /var/www/html/wp-content/plugins
 
 # Permissões
