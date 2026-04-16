@@ -29,7 +29,14 @@ multi-stack-enterprise/
 │
 ├── services/
 │   ├── codeignite/
-│       └── Dockerfile
+│       ├── vue/
+│           ├── .vscode/
+│           ├── node_modules/
+│           ├── public/
+│           ├── src/
+│           ├── src/
+│       ├── Dockerfile
+│       └── package-lock.json
 │   ├── dotnet-csharp/
 │       └── Dockerfile
 │   ├── dotnet-vb/

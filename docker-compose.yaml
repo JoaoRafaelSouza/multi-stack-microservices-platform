@@ -18,6 +18,10 @@ services:
       - "${NGINX_PORT}:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - laravel
+      - node
+      - python
     networks:
       - microservices
 
@@ -31,7 +35,7 @@ services:
     networks:
       - microservices
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8000 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -121,7 +125,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
     networks:
       - microservices
 
@@ -217,7 +221,7 @@ services:
     ports:
       - "${PROMETHEUS_PORT}:9090"
     volumes:
-      - ./prometheus:/etc/prometheus
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - microservices
 
